@@ -1,0 +1,57 @@
+body{ 
+  background-color:#050210;
+}
+#circle {
+  position: absolute;
+  top: 180px;
+  left: 30%;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  background: linear-gradient( #fb5dad, #55fb9f, #b97aff);
+  animation: rotating 1s linear infinite; 
+}
+#circle::before {
+  content: "";
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  background: linear-gradient( #fb5dac, #55fb9f, #b97aff);
+  filter: blur(100px );
+}
+@keyframes rotating {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#drop {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background-color: #050210;
+  top: 30px;
+  left: 30px;
+}
+#drop::before {
+  content: "";
+  position: absolute;
+  animation: drops 1.4s ease-out 0s infinite forwards;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+} 
+@keyframes drops {
+  0% {
+    transform: scale(0);
+    background-color: #161224;
+  } 
+  100% {
+    transform: scale(1);
+    background-color:#0f0b21;
+  }
+}
